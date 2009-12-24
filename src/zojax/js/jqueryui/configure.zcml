@@ -1,0 +1,31 @@
+<configure 
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   xmlns:zojax="http://namespaces.zope.org/zojax">
+
+  <includeDependencies package="." />
+
+  <zojax:resourcedirectory
+     name="jquery.ui" directory="default" />
+
+  <zojax:resourcedirectory
+     name="jquery.ui.flora" directory="flora" />
+
+  <zojax:resourceinclude
+     name="jquery.ui.flora.all.css"
+     library="jquery-ui"
+     type="stylesheet" filetype="zrt"
+     file="flora/flora.all.css" />
+
+  <zojax:resourceinclude
+     name="jquery.ui.all.packed.js"
+     library="jquery-ui" require="jquery"
+     type="javascript" file="jquery.ui.all.packed.js" />
+
+  <zojax:resourceinclude
+     name="jquery.ui.i18n.all.js"
+     library="jquery-ui"
+     type="javascript" compression="yes"
+     file="jquery.ui.i18n.all.js" />
+
+</configure>
